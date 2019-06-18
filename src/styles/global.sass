@@ -1,0 +1,37 @@
+// variables
+$white: #fff
+$green: #44c767
+$red: #ff0000
+$blue: #337ab7
+$darkGray: #333
+$lightGray: #f4f4f4
+
+//  mixins
+@mixin btn
+    background-color: $green
+    border-radius: 4px
+    border: none
+    display: inline-block
+    cursor: pointer
+    color: $white
+    font-weight: bold
+    padding: 12px
+    text-decoration: none
+    &:focus
+        outline: none
+
+// global styles
+html, body, #app
+    height: 100%
+    margin: 0
+body
+    font-family: 'Avenir', Helvetica, Arial, sans-serif
+    line-height: 1.4
+#app
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+#home, .about 
+    padding: 15px
+    margin: 15px auto
+a
+    text-decoration: none
