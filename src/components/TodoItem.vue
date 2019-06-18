@@ -37,7 +37,7 @@ export default {
                 content: "Undo"
         p
             display: inline-block
-            margin: 0 1em
+            margin: 0
         .btn-container
             padding: 20px
             .mark-complete
@@ -59,4 +59,6 @@ export default {
         .todo-item
             justify-content: center
             flex-flow: column nowrap
+            p
+                margin: 15px auto 0
 </style>
