@@ -1,5 +1,7 @@
 # todo
 
+View project at https://hahlee.github.io/todo/index.html
+
 ## Project setup
 ```
 npm install
