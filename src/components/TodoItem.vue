@@ -1,8 +1,10 @@
 <template>
     <div class="todo-item" :class="{'is-complete':todo.completed}">
         <p>{{todo.title}}</p>
-        <button class="mark-complete" @click="markComplete"><span></span></button>
-        <button @click="$emit('del-todo', todo.id)" class="del">DELETE</button>    
+        <div class="btn-container">
+            <button class="mark-complete" @click="markComplete"><span></span></button>
+            <button @click="$emit('del-todo', todo.id)" class="del">DELETE</button>
+        </div>   
     </div>
 </template>
 
@@ -31,25 +33,30 @@ export default {
         &.is-complete 
             p 
                 text-decoration: line-through
-            .mark-complete span:after
+            div .mark-complete span:after
                 content: "Undo"
-        .mark-complete span:after
-            content: "Complete Task"
         p
             display: inline-block
             margin: 0 1em
-            max-width: 350px
-        .mark-complete
-            @include btn
-            background-color: $blue
-            width: 110px
-            margin-left: auto
-            &:hover
-                background-color: darken($blue, 10%)
-        .del
-            @include btn
-            background-color: $red
-            margin-left: 8px
-            &:hover
-                background-color: darken($red, 10%)
+        .btn-container
+            padding: 20px
+            .mark-complete
+                @include btn
+                background-color: $blue
+                width: 110px
+                &:hover
+                    background-color: darken($blue, 10%)
+                span:after
+                    content: "Complete Task"
+            .del
+                @include btn
+                background-color: $red
+                margin-left: 8px
+                &:hover
+                    background-color: darken($red, 10%)
+        
+    @media screen and (max-width: 768px)
+        .todo-item
+            justify-content: center
+            flex-flow: column nowrap
 </style>
