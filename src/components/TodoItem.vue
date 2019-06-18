@@ -38,6 +38,7 @@ export default {
         p
             display: inline-block
             margin: 0
+            max-width: 700px
         .btn-container
             padding: 20px
             .mark-complete
@@ -61,4 +62,5 @@ export default {
             flex-flow: column nowrap
             p
                 margin: 15px auto 0
+                text-align: center
 </style>
