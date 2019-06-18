@@ -1,6 +1,6 @@
 # todo
 
-View project at https://hahlee.github.io/todo/index.html
+View project at https://hahlee.github.io/todo
 
 ## Project setup
 ```
